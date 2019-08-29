@@ -23,7 +23,7 @@ void printJobList(struct job arr[],int n)
 		slot[i]=false;
 	for(int i=0;i<n;i++)
 	{
-		for(j=min(n,arr[i].deadline)-1;j>=0;j--)
+		for(int j=min(n,arr[i].deadline)-1;j>=0;j--)
 			if(slot[j]==false)
 			{
 				result[j]=i;
@@ -38,10 +38,10 @@ void printJobList(struct job arr[],int n)
 
 int main()
 {
-	Job arr[] = { {'a', 2, 100}, {'b', 1, 19}, {'c', 2, 27}, 
-                   {'d', 1, 25}, {'e', 3, 15}}; 
+	job arr[] = { {'a', 2, 100}, {'b', 1, 19}, {'c', 2, 27},{'d', 1, 25}, {'e', 3, 15}}; 
 	int n=sizeof(arr)/sizeof(arr[0]);
 	cout<<"maximun profit joblist";
 	printJobList(arr,n);
+	cout<<"\n";
 	return 0;
 }
