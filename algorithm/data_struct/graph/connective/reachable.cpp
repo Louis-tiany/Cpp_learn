@@ -1,5 +1,4 @@
-#include<iostream>
-#include<list>
+#include<iostream> #include<list>
 
 using namespace std;
 
@@ -45,8 +44,10 @@ bool Graph::isReachable(int s,int d)
 
 		for(i=adj[s].begin();i!=adj[s].end();i++)
 		{
+			//if this node is destination node,return true
 			if(*i==d)
 				return true;
+			//else,continue to do bfs algo
 			if(!visited[*i])
 			{
 				visited[*i]=true;
